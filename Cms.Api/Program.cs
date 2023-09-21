@@ -2,6 +2,7 @@ using System.Reflection;
 using Cms.ECommerce;
 using Cms.EducationPortal;
 using Cms.Shared;
+using Cms.Shared.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();

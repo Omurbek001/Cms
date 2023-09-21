@@ -32,14 +32,10 @@
 
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
+      <Folder Include="Modules\UserProfile\Controllers\" />
+      <Folder Include="Shared\Services\" />
     </ItemGroup>
-
-
-    <ItemGroup>
-      <ProjectReference Include="..\Cms.DataBase\Cms.DataBase.csproj" />
-    </ItemGroup>
-
+    
 
 
 </Project>
