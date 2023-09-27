@@ -8,6 +8,7 @@ public abstract class Entity
     public long? CreateUserId { get; set; }
     public long? UpdateUserId { get; set; }
     public DateTime CreateDate { get; set; } = DateTime.Now.ToUniversalTime();
+    public string? ObjectName { get; set; }
     public int ClassId { get=>GetClassId();set{} }
     public int StateId { get; set; } = StateNames.Created;
     protected abstract int GetClassId();

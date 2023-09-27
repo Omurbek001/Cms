@@ -1,4 +1,5 @@
 using System.Reflection;
+using Cms.Shared.Shared.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,9 @@ public static class ServiceCollectionExtension
     {
         serviceCollection.AddSingleton(assemblies);
         serviceCollection.AddScoped<DataContext>();
+        serviceCollection.AddScoped<InitializerService>();
+        serviceCollection.AddScoped<IInitializer, SharedInitializer>();
+        
         serviceCollection.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;
