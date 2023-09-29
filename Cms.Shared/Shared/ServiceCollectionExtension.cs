@@ -1,4 +1,5 @@
 using System.Reflection;
+using Cms.Shared.Modules.UserProfile.Services;
 using Cms.Shared.Shared.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -15,6 +16,7 @@ public static class ServiceCollectionExtension
     {
         serviceCollection.AddSingleton(assemblies);
         serviceCollection.AddScoped<DataContext>();
+        serviceCollection.AddScoped<UserService>();
         serviceCollection.AddScoped<InitializerService>();
         serviceCollection.AddScoped<IInitializer, SharedInitializer>();
         

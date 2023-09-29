@@ -1,4 +1,4 @@
-namespace Cms.Shared;
+namespace Cms.Shared.Shared;
 
 public interface IInitializer
 {

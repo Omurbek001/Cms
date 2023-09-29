@@ -14,14 +14,12 @@ namespace Cms.Shared.Modules.UserProfile.Services;
 public class UserService 
 {
     private readonly UserManager<IdentityUser> _userManager;
-    private readonly IConfiguration _configuration;
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly DataContext _dataContext;
 
-    public UserService(UserManager<IdentityUser> userManager, IConfiguration configuration, DataContext dataContext, RoleManager<IdentityRole> roleManager) 
+    public UserService(UserManager<IdentityUser> userManager, DataContext dataContext, RoleManager<IdentityRole> roleManager) 
     {
         _userManager = userManager;
-        _configuration = configuration;
         _dataContext = dataContext;
         _roleManager = roleManager;
     }

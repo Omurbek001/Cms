@@ -1,4 +1,5 @@
 using Cms.Shared;
+using Cms.Shared.Shared;
 
 namespace Cms.Setup;
 

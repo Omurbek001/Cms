@@ -20,13 +20,17 @@ public class InitializerService
         await dataSet.AddAsync(entity);
         await _dataContext.SaveChangesAsync();
     }
+    
 
     public async Task AddTestData<T>(List<T> entities) where T : Entity, new()
     {
         try
         {
-            var names = entities.Select(e => e.ObjectName).ToList();
             var dataSet = _dataContext.Set<T>();
+            var names = entities
+                .Select(e => e.ObjectName)
+                .ToList();
+            
             var existItems = await dataSet
                 .Where(e => names.Contains(e.ObjectName))
                 .ToListAsync();

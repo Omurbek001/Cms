@@ -1,5 +1,6 @@
 using Cms.ECommerce.Modules.Order.Entities;
 using Cms.Shared;
+using Cms.Shared.Shared;
 using Cms.Shared.Shared.Services;
 
 namespace Cms.ECommerce.Shared;

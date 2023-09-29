@@ -5,11 +5,16 @@ using Cms.Shared;
 using Cms.Shared.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 var eCommerce = ECommerce.GetECommerceAssembly();
 var education = EducationPortal.GetEducationPortalAssembly();
+var shared = SharedAssembly.GetSharedAssembly();
+builder.Services.AddControllers()
+    .AddApplicationPart(shared)
+    .AddApplicationPart(education)
+    .AddApplicationPart(eCommerce);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 
 builder.Services.AddServices(builder.Configuration, new List<Assembly>{education,eCommerce});
