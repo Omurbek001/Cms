@@ -21,14 +21,12 @@ public class ECommerceInitializer : IInitializer
             new()
             {
                 ObjectName = "Test1",
-                Caption = "Тестовый заказ",
-                Description = "Описание тестового заказа"
+               
             },
             new()
             {
                 ObjectName = "Test2",
-                Caption = "Тестовый заказ 1 ",
-                Description = "Описание тестового заказа 1"
+             
             }
         });
     }

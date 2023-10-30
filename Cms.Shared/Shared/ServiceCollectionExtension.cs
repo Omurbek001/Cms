@@ -15,8 +15,10 @@ public static class ServiceCollectionExtension
     public static void AddServices(this IServiceCollection serviceCollection, IConfiguration configuration, ICollection<Assembly> assemblies)
     {
         serviceCollection.AddSingleton(assemblies);
+        serviceCollection.AddHttpContextAccessor();
         serviceCollection.AddScoped<DataContext>();
         serviceCollection.AddScoped<UserService>();
+        serviceCollection.AddScoped<UidService>();
         serviceCollection.AddScoped<InitializerService>();
         serviceCollection.AddScoped<IInitializer, SharedInitializer>();
         

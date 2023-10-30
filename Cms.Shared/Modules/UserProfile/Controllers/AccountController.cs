@@ -48,5 +48,9 @@ public class AccountController : ControllerBase
         }
     }
     
-    
+    [HttpPost("test")]
+    public IActionResult Test()
+    {
+        return Ok("Всё получилось");
+    }
 }

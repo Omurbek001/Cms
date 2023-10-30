@@ -10,8 +10,4 @@
       <ProjectReference Include="..\Cms.Shared\Cms.Shared.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Modules\University\" />
-    </ItemGroup>
-
 </Project>

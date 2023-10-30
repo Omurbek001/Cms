@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cms.Shared.Shared.Services;
 
-public class InitializerService
+public class  InitializerService
 {
     private readonly DataContext _dataContext;
 
@@ -24,7 +24,7 @@ public class InitializerService
 
     public async Task AddTestData<T>(List<T> entities) where T : Entity, new()
     {
-        try
+        try 
         {
             var dataSet = _dataContext.Set<T>();
             var names = entities
